@@ -1,6 +1,6 @@
 services:
   db:
-    image: postgres:17  # Sử dụng phiên bản PostgreSQL ổn định
+    image: postgres:16  # Sử dụng phiên bản PostgreSQL ổn định
     container_name: ecommerce_postgres
     restart: always
     environment:
