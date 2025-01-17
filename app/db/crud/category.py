@@ -7,6 +7,8 @@ def create_category(db : Session, category: CategoryCreate):
     if existing_category:
         existing_category.is_deleted = False
         existing_category.image = category.image
+        db.commit()  # Thêm commit
+        db.refresh(existing_category)
         return existing_category
     new_category = Category(
         name = category.name,
